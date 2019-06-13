@@ -1,13 +1,31 @@
 <h1>Pirate Information</h1>
-  <p><%= @pirate.name %></p>
-  <p><%= @pirate.height %></p>
-  <p><%= @pirate.weight %></p>
-  <p><%= @pirate.ships %></p>
+  <p>Name: <%= @pirate.name %></p>
+  <p>Height: <%= @pirate.height %></p>
+  <p>Weight: <%= @pirate.weight %></p>
+  <h2>Their Ships:</h2>
+  <%@pirate.ships.each do |ships|%>
+    <%ships.each do |data|%>
+      <p><%=data[0].capitalize%>:
+      <%=data[1]%></p>
+
+    <%end%>
+    <p>=================</p>
+  
+  <%end%>
 
 
-<h2>Display your first ship here</h2>
-  <%= @ships[0] %>
+<h2>First Ship</h2>
+  <% @pirate.ships[0].each do |info| %>
+      <p><%=info[0].capitalize%>:
+      <%=info[1]%></p>
+
+    <%# <%end%> 
+
+  <%end%>
 
 
-<h2>Display your second ship here</h2>
-  <%= @ships[1] %>
+<h2>Second Ship</h2>
+  <% @pirate.ships[1].each do |info| %>
+    <p><%=info[0].capitalize%>:
+    <%=info[1]%></p>
+  <%end%>
