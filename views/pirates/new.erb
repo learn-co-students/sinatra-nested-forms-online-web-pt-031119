@@ -1,1 +1,86 @@
-<h1>Make your form here</h1>
+<h1>Create Pirate and Ships</h1>
+
+    <form action="/pirates" method="post"> 
+        <label for="name">Pirate Name</label> 
+        <input type="text" id="name" name="pirate[name]">
+        <br>
+        <br>
+        <label for="weight">Pirate Weight</label>
+        <input type="text" id="weight" name="pirate[weight]">
+        <br>
+        <br>  
+        <label for="height">Pirate Height</label>
+        <input type="text" id="height" name="pirate[height]">
+        <br>
+        <br>
+        <label for="name">Ship 1 Name</label>
+        <input type="text" id="ship_name_1" name="pirate[ships][][name]">
+        <br>
+        <br>
+        <label for="name">Ship 1 Type</label>
+        <input type="text" id="ship_type_1" name="pirate[ships][][type]">
+        <br>
+        <br>
+        <label for="name">Ship 1 Booty</label>
+        <input type="text" id="ship_booty_1" name="pirate[ships][][booty]">
+        <br>
+        <br>
+        <label for="name">Ship 2 Name</label>
+        <input type="text" id="ship_name_2" name="pirate[ships][][name]">
+        <br>
+        <br>
+        <label for="name">Ship 2 Type</label>
+        <input type="text" id="ship_type_2" name="pirate[ships][][type]">
+        <br>
+        <br>
+        <label for="name">Ship 2 Booty</label>
+        <input type="text" id="ship_booty_2" name="pirate[ships][][booty]">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+        
+
+
+    
+
+
+
+
+
+
+
+
+<!--params_hash = {}
+params_hash["pirate"] = {}
+params_hash["pirate"]["name"] = pirate_name
+params_hash["pirate"]["weight"] = pirate_weight
+params_hash["pirate"]["height"] = pirate_height
+params_hash["pirate"]["ships"] = {}
+params_hash["pirate"]["ships"][0] = {"name" => ship_name, "type" => ship_type, "booty" => ship_booty}
+params_hash["pirate"]["ships"][1] = {"name" => ship_name, "type" => ship_type, "booty" => ship_booty}
+ 
+
+params = {
+    "pirate" => {
+        "name" => pirate_name
+        "weight" => pirate_weight
+        "height => pirate_height
+        "ships" => [
+            {
+            "name" => ship_name
+            "type" => ship_type
+            "booty" => ship_booty
+        },
+        {
+            "name" => ship_name
+            "type" => ship_type
+            "booty" => ship_booty   
+        }
+      ] 
+    }
+}-->
+
