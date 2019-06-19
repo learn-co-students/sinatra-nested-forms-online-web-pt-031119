@@ -13,9 +13,9 @@ module FormsLab
     end 
 
     post '/pirates' do
-      @pirate = Pirate.new(att_hash[:pirate])
+      @pirate = Pirate.new(params[:pirate])
 
-      att_hash[:pirate][:ships].each do |ship_info|
+      params[:pirate][:ships].each do |ship_info|
         Ship.new(ship_info)
       end 
       @ships = Ship.all 
