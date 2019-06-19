@@ -4,7 +4,10 @@ class Pirate
   
   @@all = []
   
-  def initialize
+  def initialize(hash)
+    @name = hash[:name]
+    @weight = hash[:weight]
+    @height = hash[:height]
     @@all << self
   end
   

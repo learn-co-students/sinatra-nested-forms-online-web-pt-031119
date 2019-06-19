@@ -4,7 +4,10 @@ class Ship
   
   @@all = []
   
-  def initialize
+  def initialize(hash)
+    @name = hash[:name]
+    @type = hash[:type]
+    @booty = hash[:booty]
     @@all << self
   end
   
