@@ -1,14 +1,26 @@
 require './environment'
 
 module FormsLab
+
   class App < Sinatra::Base
 
     get '/' do 
-      erb :root
+      erb :root  
     end 
 
     get '/new' do 
-      erb :new 
+      erb :'pirates/new'   
+    end 
+
+    post '/pirates' do
+      @pirate = Pirate.new(att_hash[:pirate])
+
+      att_hash[:pirate][:ships].each do |ship_info|
+        Ship.new(ship_info)
+      end 
+      @ships = Ship.all 
+      # binding.pry 
+      erb:'pirates/show'
     end 
 
   end

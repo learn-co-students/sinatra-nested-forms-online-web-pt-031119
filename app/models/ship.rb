@@ -5,10 +5,10 @@ class Ship
    #SHIP
    @@all = []
 
-   def initialize(placeholder)
-       @name = placeholder[:name]
-       @type = placeholder[:type]
-       @booty = placeholder[:booty]
+   def initialize(attr_hash)
+       @name = attr_hash[:name]
+       @type = attr_hash[:type]
+       @booty = attr_hash[:booty]
        @@all << self
    end 
 
