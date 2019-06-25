@@ -1,0 +1,32 @@
+<!-- <h1>Courses</h1>
+<% @courses.each do |course| %>
+  <div class="course">
+    <p>Name: <%= course.name %></p><br>
+    <p>Topic: <%= course.topic %></p><br>
+  </div><br>
+<% end %> --> -->
+
+
+<!-- <body>
+  <p>Puppy Name: <%= @puppy.name %></p>
+  <p>Puppy Breed: <%= @puppy.breed %></p>
+  <p>Puppy Age: <%= @puppy.months_old %> months</p>
+</body> -->
+<!--
+app.<rb>
+  require_relative 'config/environment'
+
+  class App < Sinatra::Base
+    get '/' do
+      erb :index
+    end
+
+    get '/new' do
+      erb :create_puppy
+    end
+
+    post '/puppy' do
+      @puppy = Puppy.new(params['name'], params['breed'], params['months_old'])
+      erb :display_puppy
+    end
+  end</rb> -->
